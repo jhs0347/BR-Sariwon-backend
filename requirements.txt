@@ -9,7 +9,7 @@ chardet==3.0.4
 conda==4.7.12
 conda-package-handling==1.6.0
 cryptography==2.8
-Django==3.0.3
+Django==3.0.7
 django-cors-headers==3.2.1
 idna==2.8
 mysqlclient==1.4.6
