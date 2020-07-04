@@ -8,7 +8,6 @@ from django.http import JsonResponse
 
 def requirelogin(func):
     def wrapper(self, request, *args, **kwargs):     
-        
         try:
             token = request.headers.get('Authorization', None)
             user_id = jwt.decode(token, SECRET['secret'], algorithm=SECRET['algorithm']).get('user_id', None)

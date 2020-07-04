@@ -10,12 +10,12 @@ from django.views           import View
 from django.http            import HttpResponse, JsonResponse
 from django.core.validators import validate_email, ValidationError
 
+
 PASSWORD_VALIDATION = r'^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()_])[A-Za-z\d!@#$%^&*()_]{8,}$'
 
 class SignUpView(View):
     def post(self, request):
         data = json.loads(request.body)
-        print(data['email'])
 
         try:
             validate_email(data['email'])
